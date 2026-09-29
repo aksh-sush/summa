@@ -1,0 +1,12 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Git Received') {
+            steps {
+                echo 'Received'
+                echo "Git Hash: ${env.GIT_COMMIT}"
+            }
+        }
+    }
+}
